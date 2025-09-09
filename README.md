@@ -28,32 +28,7 @@ Key Features:
 - Visualization: Confusion matrices, kernel heatmaps, training histories
 - Reproducible Experiments: Seeded random generation and standardized evaluation
 
-Project Structure
 
-radial_ripples_qml/
-├── src/
-│   ├── data/
-│   │   ├── generate_ripples.py      # Synthetic ripple image generation
-│   │   └── dataset_builder.py       # Dataset construction utilities
-│   ├── models/
-│   │   ├── classical.py             # Logistic Regression & RBF SVM
-│   │   ├── quantum_pennylane.py     # VQC implementation
-│   │   ├── quantum_pennylane_kernel.py  # Quantum kernel SVM
-│   │   └── cnn_model.py             # CNN baseline (optional)
-│   ├── utils/
-│   │   ├── visualize.py             # Plotting utilities
-│   │   └── metrics.py               # Evaluation metrics
-│   ├── tests/                       # Unit tests
-│   └── run_experiment.py            # Main experiment script
-├── notebooks/
-│   └── demo_notebook.ipynb          # Jupyter demo
-├── gui_app.py                       # Interactive GUI application
-├── hyperparameter_sweep.py          # GUI backend for sweeps
-├── requirements.txt                 # Python dependencies
-└── outputs/                         # Generated results
-    ├── images/                      # Generated ripple images
-    ├── figures/                     # Plots and visualizations
-    └── results/                     # Model performance data
 
 Installation
 
