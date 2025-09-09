@@ -183,11 +183,9 @@ Contributing
 
 License
 
-This project is open source. Please check the license file for details.
-
+This project is open source.
 Acknowledgments
 
 - PennyLane team for the quantum machine learning framework
 - Qiskit community for initial inspiration
-- Contributors and testers
 
