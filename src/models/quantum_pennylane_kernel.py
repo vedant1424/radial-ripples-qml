@@ -1,4 +1,3 @@
-
 import pennylane as qml
 from pennylane import numpy as np
 from sklearn.svm import SVC
@@ -20,7 +19,7 @@ def train_svm_with_pennylane_kernel(X_train, y_train, X_test, y_test):
     def feature_map(x1, x2):
         qml.AngleEmbedding(x1, wires=range(X_train.shape[1]))
         qml.adjoint(qml.AngleEmbedding(x2, wires=range(X_train.shape[1])))
-        return qml.expval(qml.Identity(0))
+        return qml.probs(wires=range(X_train.shape[1]))
 
     print("Computing training kernel matrix...")
     kernel_train = pennylane_kernel(X_train, X_train, feature_map)
