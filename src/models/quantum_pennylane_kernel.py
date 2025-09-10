@@ -1,3 +1,4 @@
+
 import pennylane as qml
 from pennylane import numpy as np
 from sklearn.svm import SVC
@@ -8,7 +9,7 @@ def pennylane_kernel(X1, X2, feature_map):
     kernel = np.zeros((len(X1), len(X2)))
     for i in range(len(X1)):
         for j in range(len(X2)):
-            kernel[i, j] = feature_map(X1[i], X2[j])
+            kernel[i, j] = feature_map(X1[i], X2[j])[0] # Corrected line
     return kernel
 
 def train_svm_with_pennylane_kernel(X_train, y_train, X_test, y_test):
